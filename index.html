@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio d'un Data Analyst : analyse de données, SQL, Python, visualisation et storytelling."
+      data-i18n-content="metaDescription"
+    />
+    <title data-i18n="pageTitle">Portfolio | Avoce Saïdi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#accueil" data-i18n="skipLink">Aller au contenu</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#accueil" class="logo" aria-label="Retour à l'accueil" data-i18n-aria-label="logoHome">
+          <span class="logo-name">Avoce <span>Saïdi</span></span>
+          <span class="logo-qualities" data-i18n="qualities">Rigoureux • Curieux</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navigation principale" data-i18n-aria-label="mainNavigation">
+          <ul>
+            <li><a href="#accueil" data-i18n="navHome">Accueil</a></li>
+            <li><a href="#apropos" data-i18n="navAbout">À propos</a></li>
+            <li><a href="#competences" data-i18n="navSkills">Compétences</a></li>
+            <li><a href="#projets" data-i18n="navProjects">Projets</a></li>
+            <li><a href="#formation" data-i18n="navEducation">Formation</a></li>
+            <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+          </ul>
+        </nav>
+        <label class="language-picker">
+          <span class="visually-hidden" data-i18n="languageLabel">Langue de la page</span>
+          <select id="language-select" aria-label="Langue de la page">
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <section id="accueil" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">Portfolio • Data Analyst</p>
+            <h1 data-i18n-html="heroTitle">J'accompagne les entreprises à <span class="hero-keyword">piloter</span> leur <span class="hero-keyword">activité</span> grâce aux données, pour 
+              remplacer l'intuition par des décisions <span class="hero-keyword">stratégiques</span> et <span class="hero-keyword">éclairées</span>.</h1>
+            <p class="lead" data-i18n="heroLead">
+              Je conçois des analyses, des tableaux de bord et des explorations de
+              données pour aider les équipes à comprendre les tendances, les risques
+              et les opportunités.
+            </p>
+
+            <div class="cta-group">
+              <a class="btn btn-primary" href="#projets" data-i18n="viewProjects">Voir mes projets</a>
+              <a class="btn btn-secondary" href="#contact" data-i18n="contactMe">Me contacter</a>
+            </div>
+
+            <ul class="tag-list" aria-label="Compétences principales" data-i18n-aria-label="mainSkills">
+              <li>Python</li>
+              <li>SQL</li>
+              <li>Power BI</li>
+              <li data-i18n="dashboards">Tableaux de bord</li>
+            </ul>
+          </div>
+
+          <aside class="hero-panel" aria-label="Résumé visuel" data-i18n-aria-label="visualSummary">
+            <div class="panel-card">
+              <p class="panel-label" data-i18n="focus">Focus</p>
+              <h2 data-i18n="focusTitle">Analyse exploratoire • Visualisation • KPI</h2>
+              <ul>
+                <li data-i18n="focusItem1">Nettoyage et structuration des données</li>
+                <li data-i18n="focusItem2">Requêtes SQL et exploration analytique</li>
+                <li data-i18n="focusItem3">Storytelling de données et tableaux de bord</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="apropos" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark" data-i18n="aboutEyebrow">À propos</p>
+            <h2 data-i18n="aboutTitle">Une approche analytique orientée décision.</h2>
+          </div>
+
+          <div class="about-grid">
+            <div>
+              <p data-i18n="aboutParagraph1">
+                Je suis passionné par la compréhension des données et par leur
+                transformation en informations utiles pour la prise de décision.
+                Mon travail repose sur l’analyse exploratoire, la qualité des données,
+                la modélisation statistique et la communication claire des résultats.
+              </p>
+              <p data-i18n="aboutParagraph2">
+                J’aime travailler avec des jeux de données variés, identifier les
+                points de friction, clarifier les indicateurs et présenter des
+                synthèses compréhensibles pour des publics métiers et techniques.
+              </p>
+            </div>
+
+            <div class="about-card">
+              <h3 data-i18n="aboutCardTitle">Ce que je cherche à apporter</h3>
+              <ul>
+                <li data-i18n="aboutItem1">Une lecture fiable des données</li>
+                <li data-i18n="aboutItem2">Des visualisations lisibles et actionnables</li>
+                <li data-i18n="aboutItem3">Une analyse structurée et orientée métier</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="competences" class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark" data-i18n="skillsEyebrow">Compétences</p>
+            <h2 data-i18n="skillsTitle">Les outils et compétences qui structurent mon travail.</h2>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card">
+              <h3>Python</h3>
+              <p data-i18n="pythonDescription">Pandas, NumPy, Matplotlib, Jupyter, nettoyage et exploration de données.</p>
+            </article>
+
+            <article class="skill-card">
+              <h3>SQL</h3>
+              <p data-i18n="sqlDescription">Requêtes, jointures, agrégations, filtres et logique analytique.</p>
+            </article>
+
+            <article class="skill-card">
+              <h3>Power BI</h3>
+              <p data-i18n="powerBiDescription">Création de tableaux de bord, indicateurs et rapports visuels.</p>
+            </article>
+
+            <article class="skill-card">
+              <h3 data-i18n="statistics">Statistiques</h3>
+              <p data-i18n="statisticsDescription">Analyse descriptive, interprétation des tendances et synthèse métier.</p>
+            </article>
+
+            <article class="skill-card">
+              <h3>Data Viz</h3>
+              <p data-i18n="dataVizDescription">Choix de graphiques adaptés, clarté visuelle et storytelling de données.</p>
+            </article>
+
+            <article class="skill-card">
+              <h3>Excel</h3>
+              <p data-i18n="excelDescription">Analyse de données, tableaux croisés dynamiques et préparation de rapports.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projets" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark" data-i18n="projectsEyebrow">Projets</p>
+            <h2 data-i18n="projectsTitle">Des projets centrés sur la compréhension et la communication des données.</h2>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-header">
+                <h3 data-i18n="project1Title">Analyse exploratoire d’un jeu de données public</h3>
+                <span class="badge">Python</span>
+              </div>
+
+              <dl>
+                <div>
+                  <dt data-i18n="technologies">Technologies</dt>
+                  <dd>Python, Pandas, Jupyter, Matplotlib</dd>
+                </div>
+                <div>
+                  <dt data-i18n="challenge">Problématique</dt>
+                  <dd data-i18n="project1Challenge">Identifier les variables influentes et synthétiser les tendances pour rendre les données intelligibles.</dd>
+                </div>
+                <div>
+                  <dt data-i18n="result">Résultat</dt>
+                  <dd data-i18n="project1Result">Un notebook structuré avec visualisations et observations clés pour faciliter l’interprétation.</dd>
+                </div>
+              </dl>
+
+              <a href="https://github.com/saidiavoce-12/saidiavoce-12" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span data-i18n="githubRepo">Voir le dépôt GitHub</span>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-header">
+                <h3 data-i18n="project2Title">Tableau de bord de suivi d’indicateurs</h3>
+                <span class="badge">Power BI</span>
+              </div>
+
+              <dl>
+                <div>
+                  <dt data-i18n="technologies">Technologies</dt>
+                  <dd>Power BI, Excel, DAX</dd>
+                </div>
+                <div>
+                  <dt data-i18n="challenge">Problématique</dt>
+                  <dd data-i18n="project2Challenge">Centraliser plusieurs sources d’information pour suivre des KPI et repérer rapidement les écarts.</dd>
+                </div>
+                <div>
+                  <dt data-i18n="result">Résultat</dt>
+                  <dd data-i18n="project2Result">Un tableau de bord lisible avec indicateurs, filtres et vues synthétiques pour soutenir le suivi métier.</dd>
+                </div>
+              </dl>
+
+              <a href="https://github.com/saidiavoce-12/saidiavoce-12" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span data-i18n="githubRepo">Voir le dépôt GitHub</span>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-header">
+                <h3 data-i18n="project3Title">Analyse de données marketing</h3>
+                <span class="badge">SQL</span>
+              </div>
+
+              <dl>
+                <div>
+                  <dt data-i18n="technologies">Technologies</dt>
+                  <dd>SQL, Excel, Power BI</dd>
+                </div>
+                <div>
+                  <dt data-i18n="challenge">Problématique</dt>
+                  <dd data-i18n="project3Challenge">Extraire les signaux utiles dans un volume de données pour mieux comprendre les performances et les segments.</dd>
+                </div>
+                <div>
+                  <dt data-i18n="result">Résultat</dt>
+                  <dd data-i18n="project3Result">Une synthèse exploitable des tendances, segments et performances, présentée de manière claire et actionnable.</dd>
+                </div>
+              </dl>
+
+              <a href="https://github.com/saidiavoce-12/saidiavoce-12" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span data-i18n="githubRepo">Voir le dépôt GitHub</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="formation" class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark" data-i18n="educationEyebrow">Formation</p>
+            <h2 data-i18n="educationTitle">Un parcours orienté vers les mathématiques appliquées, les statistiques et l’analyse de données.</h2>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item">
+              <span class="timeline-year timeline-year-current" data-i18n="inProgress">En cours</span>
+              <div>
+                <h3 data-i18n="masterTitle">Master 1 Mathématiques appliquées et statistiques</h3>
+                <p data-i18n="masterDescription">En cours à l’Université de Bordeaux.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <span class="timeline-year" data-i18n="bachelors">Licence</span>
+              <div>
+                <h3 data-i18n="degree1Title">Mathématiques et informatique</h3>
+                <p data-i18n="degree1Description">Licence obtenue à l’Université de Bordeaux, campus de Talence. Mention ABien.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <span class="timeline-year" data-i18n="bachelors">Licence</span>
+              <div>
+                <h3 data-i18n="degree2Title">Informatique de gestion</h3>
+                <p data-i18n="degree2Description">Cours de licence en finance, comptabilité et entrepreneuriat. Mention Bien.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container contact-wrap">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark" data-i18n="contactEyebrow">Contact</p>
+            <h2 data-i18n="contactTitle">Discutons de vos projets ou d’une opportunité.</h2>
+          </div>
+
+          <div class="contact-card">
+            <p><strong data-i18n="contactMessage">Je suis à votre écoute pour toute mission en analyse de données, création de tableaux de bord et reporting stratégique.</strong></p>
+
+            <div class="contact-links">
+              <a data-i18n-href="emailLink" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=saidiavoce%40gmail.com&amp;su=Un%20projet%20en%20Data%20Analyse" target="_blank" rel="noopener noreferrer">saidiavoce@gmail.com</a>
+              <a href="https://www.linkedin.com/in/sa%C3%AFdi-avoce-ab34923ab" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://github.com/saidiavoce-12/saidiavoce-12" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p data-i18n="footer">© 2026 Avoce Saïdi — Portfolio Data Analyst</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

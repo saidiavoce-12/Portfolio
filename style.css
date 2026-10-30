@@ -359,6 +359,31 @@ section[id] {
   padding: 5rem 0;
 }
 
+.banner-section {
+  position: relative;
+  width: 100%;
+  height: clamp(260px, 32vw, 380px);
+  background-color: #0a0a0a;
+  background-image:
+    linear-gradient(to bottom, rgba(10, 10, 10, 0) 38%, #0a0a0a 100%),
+    url("banner-data.svg");
+  background-position: center, center 48%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#apropos {
+  background: #0a0a0a;
+}
+
+#apropos .eyebrow-dark {
+  color: var(--primary);
+}
+
+#apropos .about-grid p {
+  color: rgba(237, 247, 255, 0.78);
+}
+
 .section-alt {
   background: var(--surface-muted);
 }
@@ -570,7 +595,28 @@ section[id] {
 }
 
 .contact-section {
+  background: #0a0a0a;
   padding-bottom: 6rem;
+}
+
+.contact-banner {
+  width: 100%;
+  height: clamp(420px, 42vw, 560px);
+  background-color: #0a0a0a;
+  background-image:
+    linear-gradient(to bottom, rgba(10, 10, 10, 0) 38%, #0a0a0a 100%),
+    url("photo.jpg");
+  background-position: center, center 34%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-section .eyebrow-dark {
+  color: var(--primary);
+}
+
+.contact-section .section-heading h2 {
+  color: #ffffff;
 }
 
 .contact-wrap {
@@ -580,11 +626,13 @@ section[id] {
 
 .contact-card {
   padding: 2rem 1.5rem;
+  background: #102333;
+  border-color: rgba(151, 203, 255, 0.18);
 }
 
 .contact-card p {
   margin: 0 0 1.5rem;
-  color: var(--text-soft);
+  color: rgba(237, 247, 255, 0.78);
   font-size: 1.05rem;
 }
 
@@ -595,7 +643,7 @@ section[id] {
 }
 
 .contact-links a {
-  color: var(--primary-deep);
+  color: var(--primary);
   font-weight: 700;
 }
 
@@ -682,6 +730,16 @@ section[id] {
 }
 
 @media (max-width: 560px) {
+  .banner-section {
+    height: 230px;
+    background-position: center, center;
+  }
+
+  .contact-banner {
+    height: 360px;
+    background-position: center, center 34%;
+  }
+
   .header-top {
     min-height: 64px;
   }

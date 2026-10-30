@@ -6,6 +6,8 @@ const translations = {
     qualities: "Rigorous • Curious",
     logoHome: "Back to home",
     mainNavigation: "Main navigation",
+    menuOpen: "Open menu",
+    menuClose: "Close menu",
     navHome: "Home",
     navAbout: "About",
     navSkills: "Skills",
@@ -76,6 +78,9 @@ const translations = {
 };
 
 const languageSelect = document.querySelector("#language-select");
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector("#primary-menu");
+const mobileMenuQuery = window.matchMedia("(max-width: 820px)");
 const defaultText = new Map(
   [...document.querySelectorAll("[data-i18n]")].map((element) => [element, element.textContent])
 );
@@ -128,7 +133,46 @@ function setLanguage(language) {
 
   languageSelect.setAttribute("aria-label", selectedLanguage === "en" ? "Page language" : "Langue de la page");
   languageSelect.value = selectedLanguage;
+  const menuLabelKey = menuToggle.getAttribute("aria-expanded") === "true" ? "menuClose" : "menuOpen";
+  const frenchMenuLabels = { menuOpen: "Ouvrir le menu", menuClose: "Fermer le menu" };
+  menuToggle.setAttribute("aria-label", dictionary[menuLabelKey] || frenchMenuLabels[menuLabelKey]);
 }
+
+function setMenuOpen(isOpen) {
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  mainNav.hidden = mobileMenuQuery.matches && !isOpen;
+  setLanguage(document.documentElement.lang);
+}
+
+function syncMenuToViewport() {
+  mainNav.hidden = mobileMenuQuery.matches && menuToggle.getAttribute("aria-expanded") !== "true";
+  if (!mobileMenuQuery.matches) {
+    menuToggle.setAttribute("aria-expanded", "false");
+  }
+  setLanguage(document.documentElement.lang);
+}
+
+menuToggle.addEventListener("click", () => {
+  setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+});
+
+mainNav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (mobileMenuQuery.matches) {
+      setMenuOpen(false);
+    }
+  });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+    setMenuOpen(false);
+    menuToggle.focus();
+  }
+});
+
+mobileMenuQuery.addEventListener("change", syncMenuToViewport);
+window.addEventListener("resize", syncMenuToViewport);
 
 languageSelect.addEventListener("change", () => {
   setLanguage(languageSelect.value);
@@ -140,3 +184,4 @@ languageSelect.addEventListener("change", () => {
 });
 
 setLanguage(storedLanguage || "fr");
+syncMenuToViewport();

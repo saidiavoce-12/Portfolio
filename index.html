@@ -22,16 +22,28 @@
           <span class="logo-qualities" data-i18n="qualities">Rigoureux • Curieux</span>
         </a>
 
-        <label class="language-picker">
-          <span class="visually-hidden" data-i18n="languageLabel">Langue de la page</span>
-          <select id="language-select" aria-label="Langue de la page">
-            <option value="fr">Français</option>
-            <option value="en">English</option>
-          </select>
-        </label>
+        <div class="header-actions">
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-controls="primary-menu"
+            aria-expanded="false"
+            aria-label="Ouvrir le menu"
+            data-i18n-aria-label="menuOpen"
+          >
+            <span class="menu-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+          </button>
+          <label class="language-picker">
+            <span class="visually-hidden" data-i18n="languageLabel">Langue de la page</span>
+            <select id="language-select" aria-label="Langue de la page">
+              <option value="fr">Français</option>
+              <option value="en">English</option>
+            </select>
+          </label>
+        </div>
       </div>
 
-      <nav class="main-nav" aria-label="Navigation principale" data-i18n-aria-label="mainNavigation">
+      <nav id="primary-menu" class="main-nav" aria-label="Navigation principale" data-i18n-aria-label="mainNavigation">
         <div class="container">
           <ul>
             <li><a href="#accueil" data-i18n="navHome">Accueil</a></li>
